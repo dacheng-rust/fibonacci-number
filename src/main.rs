@@ -1,20 +1,22 @@
 use std::thread;
 
 fn main() {
+    let max = 40;
+
     let handle1 = thread::spawn(|| {
-        for n in 0..40 {
+        for n in 0..max {
             println!("fib1({n}) => {}", fib1(n as i64));
         }
     });
 
     let handle2 = thread::spawn(|| {
-        for n in 0..40 {
+        for n in 0..max {
             println!("fib2({n}) => {}", fib2(n as i64));
         }
     });
 
     let handle3 = thread::spawn(|| {
-        for n in 0..40 {
+        for n in 0..max {
             println!("fib3({n}) => {}", fib3(n as i64));
         }
     });
